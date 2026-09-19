@@ -1,0 +1,4 @@
+- [ ] Recreate the attached Faber Studios homepage as closely as possible
+- [ ] Match desktop structure, proportions, typography, imagery, and color
+- [ ] Adapt the exact visual hierarchy cleanly for mobile
+- [ ] Validate desktop and mobile rendering
