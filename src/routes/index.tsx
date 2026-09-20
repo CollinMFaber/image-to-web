@@ -19,7 +19,7 @@ import heroImage from "@/assets/reference/hero-full.png.asset.json";
 import heroTagline from "@/assets/reference/hero-handwritten-tagline.png.asset.json";
 import footerLogo from "@/assets/reference/logo-footer.png.asset.json";
 import headerLogo from "@/assets/reference/logo-header.png.asset.json";
-import projectWordmark from "@/assets/reference/project-wordmark.png.asset.json";
+import projectWordmark from "@/assets/project-wordmark.png";
 import brandIcon from "@/assets/reference/service-brand-icon.png.asset.json";
 import collaborationIcon from "@/assets/reference/service-collaboration-icon.png.asset.json";
 import developmentIcon from "@/assets/reference/service-development-icon.png.asset.json";
