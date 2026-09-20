@@ -90,11 +90,10 @@ button { font: inherit; }
 .button-gold { background: var(--gold); color: var(--foreground); min-width: 175px; }
 .feature-video { position: relative; min-height: 354px; overflow: hidden; }
 .feature-video img { width: 100%; height: 100%; object-fit: cover; }
-.feature-video > span { position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%); font-weight: 700; font-size: 15px; }
-.play-button { position: absolute; left: 50%; top: 60%; transform: translate(-50%, -50%); width: 62px; height: 62px; display: grid; place-items: center; border: 0; border-radius: 50%; color: var(--foreground); background: var(--primary-foreground); cursor: pointer; }
+.feature-video > span { position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%); font-weight: 700; font-size: 15px; color: var(--primary-foreground); }
+.play-button { position: absolute; left: 50%; top: 60%; transform: translate(-50%, -50%); width: 62px; height: 62px; display: grid; place-items: center; border: 0; border-radius: 50%; color: var(--foreground); background: var(--primary-foreground); cursor: pointer; box-shadow: 0 6px 18px oklch(0 0 0 / .25); transition: transform .2s ease; }
+.play-button:hover { transform: translate(-50%, -50%) scale(1.06); }
 .play-button svg { margin-left: 4px; }
-.feature-video .play-button { opacity: 0; }
-.feature-video > span { display: none; }
 .triptych { min-height: 354px; display: grid; grid-template-rows: repeat(3, 1fr); gap: 7px; overflow: hidden; }
 .triptych img { width: 100%; height: 100%; min-height: 0; object-fit: cover; }
 
