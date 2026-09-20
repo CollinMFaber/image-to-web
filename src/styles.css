@@ -67,7 +67,6 @@ button { font: inherit; }
 .button { min-height: 44px; padding: 0 25px; font-size: 14px; border: 1.5px solid transparent; }
 .button-light { color: var(--foreground); background: var(--primary-foreground); }
 .button-outline { color: var(--primary-foreground); border-color: var(--primary-foreground); }
-.hero-note { width: 199px; height: 64px; object-fit: contain; margin-top: 10px; margin-left: -12px; }
 
 .services-section { padding: 28px 0 24px; }
 .section-intro { display: grid; grid-template-columns: .9fr 1.1fr; gap: 85px; align-items: end; }
@@ -146,7 +145,6 @@ button { font: inherit; }
   .hero-content { min-height: 250px; padding-top: 28px; padding-bottom: 26px; justify-content: center; }
   .hero h1 { font-size: 47px; }
   .hero p { font-size: 13px; }
-  .hero-note { display: block; width: 220px; margin-top: 8px; margin-left: 0; object-position: left center; }
   .section-intro h2, .about-copy h2 { font-size: 30px; }
   .service-grid { grid-template-columns: 1fr 1fr; }
   .service-item { padding: 0 13px; }
