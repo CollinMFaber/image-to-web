@@ -18,7 +18,7 @@ import scooterImage from "@/assets/reference/featured-thumb-scooter.png";
 import heroImage from "@/assets/hero-header-recreated.png";
 import footerLogo from "@/assets/reference/logo-footer-transparent.png";
 import headerLogo from "@/assets/reference/logo-header-transparent.png";
-import projectWordmark from "@/assets/project-wordmark.png";
+import projectWordmark from "@/assets/project-wordmark-transparent.png";
 import brandIcon from "@/assets/reference/service-brand-icon-transparent.png";
 import collaborationIcon from "@/assets/reference/service-collaboration-icon-transparent.png";
 import developmentIcon from "@/assets/reference/service-development-icon-transparent.png";
