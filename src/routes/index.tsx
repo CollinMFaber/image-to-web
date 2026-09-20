@@ -11,7 +11,7 @@ import {
 import { useState } from "react";
 
 import aboutTagline from "@/assets/reference/about-handwritten-tagline.png";
-import featureImage from "@/assets/reference/featured-main.png";
+import featureImage from "@/assets/featured-main-clean.png";
 import coastImage from "@/assets/reference/featured-thumb-coast.png";
 import mapImage from "@/assets/reference/featured-thumb-map.png";
 import scooterImage from "@/assets/reference/featured-thumb-scooter.png";
