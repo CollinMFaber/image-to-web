@@ -95,6 +95,11 @@ button { font: inherit; }
 .play-button { position: absolute; left: 50%; top: 60%; transform: translate(-50%, -50%); width: 62px; height: 62px; display: grid; place-items: center; border: 0; border-radius: 50%; color: var(--foreground); background: var(--primary-foreground); cursor: pointer; box-shadow: 0 6px 18px oklch(0 0 0 / .25); transition: transform .2s ease; }
 .play-button:hover { transform: translate(-50%, -50%) scale(1.06); }
 .play-button svg { margin-left: 4px; }
+.video-modal { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 28px; background: oklch(0.04 0.012 240 / .92); }
+.video-modal-inner { position: relative; width: min(1120px, 100%); }
+.video-modal video { display: block; width: 100%; max-height: calc(100vh - 56px); aspect-ratio: 16 / 9; background: var(--foreground); box-shadow: 0 24px 70px oklch(0 0 0 / .5); }
+.video-close { position: absolute; z-index: 1; top: 12px; right: 12px; width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid oklch(1 0 0 / .35); border-radius: 50%; color: var(--primary-foreground); background: oklch(0.08 0.02 240 / .72); cursor: pointer; }
+.video-close:hover { background: var(--primary); }
 .triptych { min-height: 354px; display: grid; grid-template-rows: repeat(3, 1fr); gap: 7px; overflow: hidden; }
 .triptych img { width: 100%; height: 100%; min-height: 0; object-fit: cover; }
 
@@ -154,6 +159,8 @@ button { font: inherit; }
   .feature-copy { padding-right: 0; }
   .film-title { width: 270px; }
   .feature-video { min-height: 245px; }
+  .video-modal { padding: 16px; }
+  .video-close { top: 8px; right: 8px; width: 38px; height: 38px; }
   .about-grid { grid-template-columns: 1fr; gap: 24px; }
   .about-grid > img { height: 255px; }
   .footer-main { grid-template-columns: 1fr auto; align-items: start; }

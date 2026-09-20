@@ -8,11 +8,12 @@ import {
   X,
   Youtube,
 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import aboutTagline from "@/assets/reference/about-handwritten-tagline-transparent.png";
 import faberStudiosLogo from "@/assets/faber-studios-stacked.svg";
 import featureImage from "@/assets/featured-main-clean.png";
+import penguinoPilot from "@/assets/Penguino_Pilot.mp4.asset.json";
 import coastImage from "@/assets/reference/featured-thumb-coast.png";
 import mapImage from "@/assets/reference/featured-thumb-map.png";
 import scooterImage from "@/assets/reference/featured-thumb-scooter.png";
@@ -80,6 +81,27 @@ function Brand({ inverted = false }: { inverted?: boolean }) {
 
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [videoOpen, setVideoOpen] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const openVideo = () => setVideoOpen(true);
+
+  useEffect(() => {
+    if (!videoOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setVideoOpen(false);
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+    void videoRef.current?.play().catch(() => undefined);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [videoOpen]);
 
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
@@ -154,7 +176,7 @@ function Index() {
           </div>
           <div className="feature-video">
             <img src={featureImage} alt="Penguino beside a Venetian canal" width={400} height={315} loading="lazy" />
-            <button className="play-button" aria-label="Play Penguino teaser"><Play fill="currentColor" /></button>
+            <button className="play-button" aria-label="Play Penguino teaser" onClick={openVideo}><Play fill="currentColor" /></button>
             <span>Watch Teaser</span>
           </div>
           <div className="triptych">
@@ -193,6 +215,19 @@ function Index() {
         </div>
         <div className="page-shell footer-bottom"><span>© 2026 Faber Studios. All rights reserved.</span><span>Los Angeles, CA</span></div>
       </footer>
+
+      {videoOpen && (
+        <div className="video-modal" role="dialog" aria-modal="true" aria-label="Penguino teaser" onClick={() => setVideoOpen(false)}>
+          <div className="video-modal-inner" onClick={(event) => event.stopPropagation()}>
+            <button className="video-close" autoFocus onClick={() => setVideoOpen(false)} aria-label="Close video">
+              <X />
+            </button>
+            <video ref={videoRef} src={penguinoPilot.url} controls autoPlay playsInline preload="metadata">
+              Your browser does not support video playback.
+            </video>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

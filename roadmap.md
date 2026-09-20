@@ -3,3 +3,4 @@
 - [x] Adapt the exact visual hierarchy cleanly for mobile
 - [x] Validate desktop and mobile rendering
 - [x] Replace generated artwork with the supplied production assets
+- [x] Play the uploaded Penguino trailer from the Featured Project play button
