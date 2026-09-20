@@ -15,7 +15,7 @@ import featureImage from "@/assets/reference/featured-main.png";
 import coastImage from "@/assets/reference/featured-thumb-coast.png";
 import mapImage from "@/assets/reference/featured-thumb-map.png";
 import scooterImage from "@/assets/reference/featured-thumb-scooter.png";
-import heroImage from "@/assets/hero-overlay-bg.png";
+import heroImage from "@/assets/hero-header-recreated.png";
 import footerLogo from "@/assets/reference/logo-footer.png";
 import headerLogo from "@/assets/reference/logo-header.png";
 import projectWordmark from "@/assets/project-wordmark.png";
@@ -111,7 +111,7 @@ function Index() {
       </header>
 
       <section id="home" className="hero">
-        <img src={heroImage} alt="Penguino overlooking a colorful Mediterranean village" width={1024} height={426} />
+        <img src={heroImage} alt="Penguino overlooking a colorful Italian coastal village" width={1024} height={426} />
         <div className="hero-shade" />
         <div className="page-shell hero-content">
           <h1>Stories<br />Bring Us<br />Together</h1>
