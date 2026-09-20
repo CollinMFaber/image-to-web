@@ -10,21 +10,21 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
-import aboutTagline from "@/assets/reference/about-handwritten-tagline.png.asset.json";
-import featureImage from "@/assets/reference/featured-main.png.asset.json";
-import coastImage from "@/assets/reference/featured-thumb-coast.png.asset.json";
-import mapImage from "@/assets/reference/featured-thumb-map.png.asset.json";
-import scooterImage from "@/assets/reference/featured-thumb-scooter.png.asset.json";
-import heroImage from "@/assets/reference/hero-full.png.asset.json";
-import heroTagline from "@/assets/reference/hero-handwritten-tagline.png.asset.json";
-import footerLogo from "@/assets/reference/logo-footer.png.asset.json";
-import headerLogo from "@/assets/reference/logo-header.png.asset.json";
+import aboutTagline from "@/assets/reference/about-handwritten-tagline.png";
+import featureImage from "@/assets/reference/featured-main.png";
+import coastImage from "@/assets/reference/featured-thumb-coast.png";
+import mapImage from "@/assets/reference/featured-thumb-map.png";
+import scooterImage from "@/assets/reference/featured-thumb-scooter.png";
+import heroImage from "@/assets/reference/hero-full.png";
+import heroTagline from "@/assets/reference/hero-handwritten-tagline.png";
+import footerLogo from "@/assets/reference/logo-footer.png";
+import headerLogo from "@/assets/reference/logo-header.png";
 import projectWordmark from "@/assets/project-wordmark.png";
-import brandIcon from "@/assets/reference/service-brand-icon.png.asset.json";
-import collaborationIcon from "@/assets/reference/service-collaboration-icon.png.asset.json";
-import developmentIcon from "@/assets/reference/service-development-icon.png.asset.json";
-import productionIcon from "@/assets/reference/service-production-icon.png.asset.json";
-import studioImage from "@/assets/reference/studio-workspace.png.asset.json";
+import brandIcon from "@/assets/reference/service-brand-icon.png";
+import collaborationIcon from "@/assets/reference/service-collaboration-icon.png";
+import developmentIcon from "@/assets/reference/service-development-icon.png";
+import productionIcon from "@/assets/reference/service-production-icon.png";
+import studioImage from "@/assets/reference/studio-workspace.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -51,22 +51,22 @@ const navItems = ["Home", "About", "Our Work", "Services", "Careers", "Contact"]
 
 const services = [
   {
-    icon: developmentIcon.url,
+    icon: developmentIcon,
     title: "Development",
     copy: "Original IP and creative development",
   },
   {
-    icon: productionIcon.url,
+    icon: productionIcon,
     title: "Production",
     copy: "2D, 3D, and hybrid animation",
   },
   {
-    icon: brandIcon.url,
+    icon: brandIcon,
     title: "Brand & Commercial",
     copy: "Animated content for brands and agencies",
   },
   {
-    icon: collaborationIcon.url,
+    icon: collaborationIcon,
     title: "Collaboration",
     copy: "Partnering with creators, studios, and visionaries",
   },
@@ -75,7 +75,7 @@ const services = [
 function Brand({ inverted = false }: { inverted?: boolean }) {
   return (
     <a href="#home" className={inverted ? "brand brand-inverted" : "brand"} aria-label="Faber Studios home">
-      <img src={inverted ? footerLogo.url : headerLogo.url} alt="Faber Studios" width={inverted ? 112 : 176} height={inverted ? 45 : 52} />
+      <img src={inverted ? footerLogo : headerLogo} alt="Faber Studios" width={inverted ? 112 : 176} height={inverted ? 45 : 52} />
     </a>
   );
 }
@@ -112,7 +112,7 @@ function Index() {
       </header>
 
       <section id="home" className="hero">
-        <img src={heroImage.url} alt="Penguino overlooking a colorful Mediterranean village" width={1024} height={426} />
+        <img src={heroImage} alt="Penguino overlooking a colorful Mediterranean village" width={1024} height={426} />
         <div className="hero-shade" />
         <div className="page-shell hero-content">
           <h1>Stories<br />Bring Us<br />Together</h1>
@@ -121,7 +121,7 @@ function Index() {
             <a className="button button-light" href="#our-work">Watch Our Reel <Play size={15} fill="currentColor" /></a>
             <a className="button button-outline" href="#our-work">Our Work</a>
           </div>
-          <img className="hero-note" src={heroTagline.url} alt="Different perspectives. Brighter stories." width={199} height={64} />
+          <img className="hero-note" src={heroTagline} alt="Different perspectives. Brighter stories." width={199} height={64} />
         </div>
       </section>
 
@@ -156,27 +156,27 @@ function Index() {
             <a className="button button-gold" href="#about">View Project <ArrowRight size={17} /></a>
           </div>
           <div className="feature-video">
-            <img src={featureImage.url} alt="Penguino beside a Venetian canal" width={400} height={315} loading="lazy" />
+            <img src={featureImage} alt="Penguino beside a Venetian canal" width={400} height={315} loading="lazy" />
             <button className="play-button" aria-label="Play Penguino teaser"><Play fill="currentColor" /></button>
             <span>Watch Teaser</span>
           </div>
           <div className="triptych">
-            <img src={scooterImage.url} alt="Penguino riding a scooter" width={188} height={99} loading="lazy" />
-            <img src={coastImage.url} alt="Penguino overlooking the Italian coast" width={188} height={95} loading="lazy" />
-            <img src={mapImage.url} alt="Penguino reading a map in Rome" width={188} height={111} loading="lazy" />
+            <img src={scooterImage} alt="Penguino riding a scooter" width={188} height={99} loading="lazy" />
+            <img src={coastImage} alt="Penguino overlooking the Italian coast" width={188} height={95} loading="lazy" />
+            <img src={mapImage} alt="Penguino reading a map in Rome" width={188} height={111} loading="lazy" />
           </div>
         </div>
       </section>
 
       <section id="about" className="about-section">
         <div className="page-shell about-grid">
-          <img src={studioImage.url} alt="The warm, art-filled Faber Studios workspace" width={387} height={228} loading="lazy" />
+          <img src={studioImage} alt="The warm, art-filled Faber Studios workspace" width={387} height={228} loading="lazy" />
           <div className="about-copy">
             <span className="eyebrow">About Faber Studios</span>
             <h2>Animation for a<br />More Connected World</h2>
             <p>Based in Los Angeles, CA, Faber Studios is a creative-driven animation company dedicated to storytelling that crosses cultures, generations, and borders. We believe animation has the power to spark imagination, build empathy, and bring people together.</p>
             <a className="button button-dark" href="#contact">Our Story</a>
-            <img className="about-note" src={aboutTagline.url} alt="Different perspectives. Brighter stories." width={120} height={102} loading="lazy" />
+            <img className="about-note" src={aboutTagline} alt="Different perspectives. Brighter stories." width={120} height={102} loading="lazy" />
           </div>
         </div>
       </section>
