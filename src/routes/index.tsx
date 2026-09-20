@@ -150,7 +150,7 @@ function Index() {
         <div className="page-shell feature-grid">
           <div className="feature-copy">
             <span className="eyebrow eyebrow-light">Featured project</span>
-            <img className="film-title" src={projectWordmark.url} alt="Penguino" width={322} height={97} loading="lazy" />
+            <img className="film-title" src={projectWordmark} alt="Penguino" width={322} height={93} loading="lazy" />
             <span className="film-kicker">A bigger world awaits</span>
             <p>Penguino is an upcoming animated feature from Faber Studios, following a curious and courageous penguin on a heartwarming journey through Italy. With breathtaking locations, unforgettable characters, and a story about friendship, discovery, and belonging, Penguino is an adventure for audiences of all ages.</p>
             <a className="button button-gold" href="#about">View Project <ArrowRight size={17} /></a>
