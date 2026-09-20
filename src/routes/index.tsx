@@ -15,7 +15,7 @@ import featureImage from "@/assets/reference/featured-main.png";
 import coastImage from "@/assets/reference/featured-thumb-coast.png";
 import mapImage from "@/assets/reference/featured-thumb-map.png";
 import scooterImage from "@/assets/reference/featured-thumb-scooter.png";
-import heroImage from "@/assets/hero-final.png";
+import heroImage from "@/assets/hero-overlay-bg.png";
 import footerLogo from "@/assets/reference/logo-footer.png";
 import headerLogo from "@/assets/reference/logo-header.png";
 import projectWordmark from "@/assets/project-wordmark.png";
