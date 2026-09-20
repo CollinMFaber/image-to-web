@@ -16,8 +16,6 @@ import coastImage from "@/assets/reference/featured-thumb-coast.png";
 import mapImage from "@/assets/reference/featured-thumb-map.png";
 import scooterImage from "@/assets/reference/featured-thumb-scooter.png";
 import heroImage from "@/assets/hero-header-recreated.png";
-import footerLogo from "@/assets/reference/logo-footer-transparent.png";
-import headerLogo from "@/assets/reference/logo-header-transparent.png";
 import projectWordmark from "@/assets/project-wordmark-transparent.png";
 import brandIcon from "@/assets/reference/service-brand-icon-transparent.png";
 import collaborationIcon from "@/assets/reference/service-collaboration-icon-transparent.png";
@@ -74,7 +72,10 @@ const services = [
 function Brand({ inverted = false }: { inverted?: boolean }) {
   return (
     <a href="#home" className={inverted ? "brand brand-inverted" : "brand"} aria-label="Faber Studios home">
-      <img src={inverted ? footerLogo : headerLogo} alt="Faber Studios" width={inverted ? 112 : 176} height={inverted ? 45 : 52} />
+      <span className="brand-name" aria-hidden="true">
+        <span className="brand-word brand-word-faber">{"FABER".split("").map((letter, index) => <span key={`${letter}-${index}`}>{letter}</span>)}</span>
+        <span className="brand-word brand-word-studios">{"STUDIOS".split("").map((letter, index) => <span key={`${letter}-${index}`}>{letter}</span>)}</span>
+      </span>
     </a>
   );
 }
