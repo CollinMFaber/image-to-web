@@ -2,3 +2,4 @@
 - [x] Match desktop structure, proportions, typography, imagery, and color
 - [x] Adapt the exact visual hierarchy cleanly for mobile
 - [x] Validate desktop and mobile rendering
+- [x] Replace generated artwork with the supplied production assets
