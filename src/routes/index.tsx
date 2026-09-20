@@ -11,6 +11,7 @@ import {
 import { useState } from "react";
 
 import aboutTagline from "@/assets/reference/about-handwritten-tagline-transparent.png";
+import faberStudiosLogo from "@/assets/faber-studios-stacked.svg";
 import featureImage from "@/assets/featured-main-clean.png";
 import coastImage from "@/assets/reference/featured-thumb-coast.png";
 import mapImage from "@/assets/reference/featured-thumb-map.png";
@@ -72,10 +73,7 @@ const services = [
 function Brand({ inverted = false }: { inverted?: boolean }) {
   return (
     <a href="#home" className={inverted ? "brand brand-inverted" : "brand"} aria-label="Faber Studios home">
-      <span className="brand-name" aria-hidden="true">
-        <span className="brand-word brand-word-faber">{"FABER".split("").map((letter, index) => <span key={`${letter}-${index}`}>{letter}</span>)}</span>
-        <span className="brand-word brand-word-studios">{"STUDIOS".split("").map((letter, index) => <span key={`${letter}-${index}`}>{letter}</span>)}</span>
-      </span>
+      <img className="brand-logo" src={faberStudiosLogo} alt="" aria-hidden="true" />
     </a>
   );
 }
