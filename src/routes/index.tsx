@@ -120,7 +120,6 @@ function Index() {
             <a className="button button-light" href="#our-work">Watch Our Reel <Play size={15} fill="currentColor" /></a>
             <a className="button button-outline" href="#our-work">Our Work</a>
           </div>
-          <img className="hero-note" src={heroTagline} alt="Different perspectives. Brighter stories." width={232} height={64} />
         </div>
       </section>
 
