@@ -13,9 +13,9 @@ import { useEffect, useRef, useState } from "react";
 import aboutTagline from "@/assets/reference/about-handwritten-tagline-transparent.png";
 import faberStudiosLogo from "@/assets/faber-studios-stacked.svg";
 import featureImage from "@/assets/featured-main-clean.png";
-import penguinoPilot from "@/assets/Penguino_Pilot.mp4.asset.json";
-import penguinoPilotWebm from "@/assets/Penguino_Pilot.webm.asset.json";
-import penguinoPoster from "@/assets/penguino-poster.jpg.asset.json";
+const penguinoPilotUrl = "/video/Penguino_Pilot.mp4";
+const penguinoPilotWebmUrl = "/video/Penguino_Pilot.webm";
+const penguinoPosterUrl = "/video/penguino-poster.jpg";
 import coastImage from "@/assets/reference/featured-thumb-coast.png";
 import mapImage from "@/assets/reference/featured-thumb-map.png";
 import scooterImage from "@/assets/reference/featured-thumb-scooter.png";
@@ -228,9 +228,9 @@ function Index() {
             <button className="video-close" autoFocus onClick={() => setVideoOpen(false)} aria-label="Close video">
               <X />
             </button>
-            <video ref={videoRef} controls autoPlay playsInline preload="auto" poster={penguinoPoster.url}>
-              <source src={penguinoPilot.url} type="video/mp4" />
-              <source src={penguinoPilotWebm.url} type="video/webm" />
+            <video ref={videoRef} controls autoPlay playsInline preload="auto" poster={penguinoPosterUrl}>
+              <source src={penguinoPilotUrl} type="video/mp4" />
+              <source src={penguinoPilotWebmUrl} type="video/webm" />
               Your browser does not support video playback.
             </video>
           </div>
