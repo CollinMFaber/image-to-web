@@ -1,23 +1,30 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowRight,
-  Clapperboard,
-  Code2,
   Instagram,
   Linkedin,
   Menu,
-  MonitorPlay,
   Play,
-  UsersRound,
   X,
   Youtube,
 } from "lucide-react";
 import { useState } from "react";
 
-import heroImage from "@/assets/puffin-hero.jpg";
-import featureImage from "@/assets/puffin-feature.jpg";
-import triptychImage from "@/assets/puffin-triptych.jpg";
-import studioImage from "@/assets/studio-workspace.jpg";
+import aboutTagline from "@/assets/reference/about-handwritten-tagline.png.asset.json";
+import featureImage from "@/assets/reference/featured-main.png.asset.json";
+import coastImage from "@/assets/reference/featured-thumb-coast.png.asset.json";
+import mapImage from "@/assets/reference/featured-thumb-map.png.asset.json";
+import scooterImage from "@/assets/reference/featured-thumb-scooter.png.asset.json";
+import heroImage from "@/assets/reference/hero-full.png.asset.json";
+import heroTagline from "@/assets/reference/hero-handwritten-tagline.png.asset.json";
+import footerLogo from "@/assets/reference/logo-footer.png.asset.json";
+import headerLogo from "@/assets/reference/logo-header.png.asset.json";
+import projectWordmark from "@/assets/reference/project-wordmark.png.asset.json";
+import brandIcon from "@/assets/reference/service-brand-icon.png.asset.json";
+import collaborationIcon from "@/assets/reference/service-collaboration-icon.png.asset.json";
+import developmentIcon from "@/assets/reference/service-development-icon.png.asset.json";
+import productionIcon from "@/assets/reference/service-production-icon.png.asset.json";
+import studioImage from "@/assets/reference/studio-workspace.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -44,36 +51,31 @@ const navItems = ["Home", "About", "Our Work", "Services", "Careers", "Contact"]
 
 const services = [
   {
-    icon: Code2,
+    icon: developmentIcon.url,
     title: "Development",
     copy: "Original IP and creative development",
-    tone: "bg-service-coral",
   },
   {
-    icon: Clapperboard,
+    icon: productionIcon.url,
     title: "Production",
     copy: "2D, 3D, and hybrid animation",
-    tone: "bg-service-blue",
   },
   {
-    icon: MonitorPlay,
+    icon: brandIcon.url,
     title: "Brand & Commercial",
     copy: "Animated content for brands and agencies",
-    tone: "bg-service-mint",
   },
   {
-    icon: UsersRound,
+    icon: collaborationIcon.url,
     title: "Collaboration",
     copy: "Partnering with creators, studios, and visionaries",
-    tone: "bg-service-lilac",
   },
 ];
 
 function Brand({ inverted = false }: { inverted?: boolean }) {
   return (
     <a href="#home" className={inverted ? "brand brand-inverted" : "brand"} aria-label="Faber Studios home">
-      <span>FABER</span>
-      <small>STUDIOS</small>
+      <img src={inverted ? footerLogo.url : headerLogo.url} alt="Faber Studios" width={inverted ? 112 : 176} height={inverted ? 45 : 52} />
     </a>
   );
 }
@@ -110,7 +112,7 @@ function Index() {
       </header>
 
       <section id="home" className="hero">
-        <img src={heroImage} alt="Penguino overlooking a colorful Mediterranean village" width={1920} height={1080} />
+        <img src={heroImage.url} alt="Penguino overlooking a colorful Mediterranean village" width={1024} height={426} />
         <div className="hero-shade" />
         <div className="page-shell hero-content">
           <h1>Stories<br />Bring Us<br />Together</h1>
@@ -119,9 +121,8 @@ function Index() {
             <a className="button button-light" href="#our-work">Watch Our Reel <Play size={15} fill="currentColor" /></a>
             <a className="button button-outline" href="#our-work">Our Work</a>
           </div>
-          <span className="script-note hero-note">Different perspectives.<br />Brighter stories.</span>
+          <img className="hero-note" src={heroTagline.url} alt="Different perspectives. Brighter stories." width={199} height={64} />
         </div>
-        <span className="script-note sky-note">A small penguin.<br />A big adventure.</span>
       </section>
 
       <section id="services" className="services-section">
@@ -134,9 +135,9 @@ function Index() {
             <p>We develop and produce animation for film, television, streaming, commercials, and branded content. Our team combines artistry, storytelling, and technology to bring bold ideas to life.</p>
           </div>
           <div className="service-grid">
-            {services.map(({ icon: Icon, title, copy, tone }) => (
+            {services.map(({ icon, title, copy }) => (
               <article key={title} className="service-item">
-                <div className={`service-icon ${tone}`}><Icon strokeWidth={1.6} /></div>
+                <img className="service-icon" src={icon} alt="" width={69} height={67} loading="lazy" />
                 <h3>{title}</h3>
                 <p>{copy}</p>
               </article>
@@ -149,31 +150,33 @@ function Index() {
         <div className="page-shell feature-grid">
           <div className="feature-copy">
             <span className="eyebrow eyebrow-light">Featured project</span>
-            <h2 className="film-title">Penguino</h2>
+            <img className="film-title" src={projectWordmark.url} alt="Penguino" width={322} height={97} loading="lazy" />
             <span className="film-kicker">A bigger world awaits</span>
             <p>Penguino is an upcoming animated feature from Faber Studios, following a curious and courageous penguin on a heartwarming journey through Italy. With breathtaking locations, unforgettable characters, and a story about friendship, discovery, and belonging, Penguino is an adventure for audiences of all ages.</p>
             <a className="button button-gold" href="#about">View Project <ArrowRight size={17} /></a>
           </div>
           <div className="feature-video">
-            <img src={featureImage} alt="Penguino beside a Venetian canal" width={1536} height={864} loading="lazy" />
+            <img src={featureImage.url} alt="Penguino beside a Venetian canal" width={400} height={315} loading="lazy" />
             <button className="play-button" aria-label="Play Penguino teaser"><Play fill="currentColor" /></button>
             <span>Watch Teaser</span>
           </div>
           <div className="triptych">
-            <img src={triptychImage} alt="Scenes from Penguino's Italian adventure" width={1024} height={1536} loading="lazy" />
+            <img src={scooterImage.url} alt="Penguino riding a scooter" width={188} height={99} loading="lazy" />
+            <img src={coastImage.url} alt="Penguino overlooking the Italian coast" width={188} height={95} loading="lazy" />
+            <img src={mapImage.url} alt="Penguino reading a map in Rome" width={188} height={111} loading="lazy" />
           </div>
         </div>
       </section>
 
       <section id="about" className="about-section">
         <div className="page-shell about-grid">
-          <img src={studioImage} alt="The warm, art-filled Faber Studios workspace" width={1408} height={960} loading="lazy" />
+          <img src={studioImage.url} alt="The warm, art-filled Faber Studios workspace" width={387} height={228} loading="lazy" />
           <div className="about-copy">
             <span className="eyebrow">About Faber Studios</span>
             <h2>Animation for a<br />More Connected World</h2>
             <p>Based in Los Angeles, CA, Faber Studios is a creative-driven animation company dedicated to storytelling that crosses cultures, generations, and borders. We believe animation has the power to spark imagination, build empathy, and bring people together.</p>
             <a className="button button-dark" href="#contact">Our Story</a>
-            <span className="script-note about-note">Different<br />perspectives.<br />Brighter stories.</span>
+            <img className="about-note" src={aboutTagline.url} alt="Different perspectives. Brighter stories." width={120} height={102} loading="lazy" />
           </div>
         </div>
       </section>
