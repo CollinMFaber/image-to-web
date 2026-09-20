@@ -219,7 +219,7 @@ function Index() {
       {videoOpen && (
         <div className="video-modal" role="dialog" aria-modal="true" aria-label="Penguino teaser" onClick={() => setVideoOpen(false)}>
           <div className="video-modal-inner" onClick={(event) => event.stopPropagation()}>
-            <button className="video-close" onClick={() => setVideoOpen(false)} aria-label="Close video">
+            <button className="video-close" autoFocus onClick={() => setVideoOpen(false)} aria-label="Close video">
               <X />
             </button>
             <video ref={videoRef} src={penguinoPilot.url} controls autoPlay playsInline preload="metadata">
