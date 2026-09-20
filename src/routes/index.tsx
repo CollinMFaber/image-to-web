@@ -10,19 +10,19 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
-import aboutTagline from "@/assets/reference/about-handwritten-tagline.png";
+import aboutTagline from "@/assets/reference/about-handwritten-tagline-transparent.png";
 import featureImage from "@/assets/featured-main-clean.png";
 import coastImage from "@/assets/reference/featured-thumb-coast.png";
 import mapImage from "@/assets/reference/featured-thumb-map.png";
 import scooterImage from "@/assets/reference/featured-thumb-scooter.png";
 import heroImage from "@/assets/hero-header-recreated.png";
-import footerLogo from "@/assets/reference/logo-footer.png";
-import headerLogo from "@/assets/reference/logo-header.png";
+import footerLogo from "@/assets/reference/logo-footer-transparent.png";
+import headerLogo from "@/assets/reference/logo-header-transparent.png";
 import projectWordmark from "@/assets/project-wordmark.png";
-import brandIcon from "@/assets/reference/service-brand-icon.png";
-import collaborationIcon from "@/assets/reference/service-collaboration-icon.png";
-import developmentIcon from "@/assets/reference/service-development-icon.png";
-import productionIcon from "@/assets/reference/service-production-icon.png";
+import brandIcon from "@/assets/reference/service-brand-icon-transparent.png";
+import collaborationIcon from "@/assets/reference/service-collaboration-icon-transparent.png";
+import developmentIcon from "@/assets/reference/service-development-icon-transparent.png";
+import productionIcon from "@/assets/reference/service-production-icon-transparent.png";
 import studioImage from "@/assets/reference/studio-workspace.png";
 
 export const Route = createFileRoute("/")({
